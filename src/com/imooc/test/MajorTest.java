@@ -1,13 +1,18 @@
 package com.imooc.test;
 
 import com.imooc.model.Major;
+import com.imooc.model.Student;
 
 public class MajorTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Major m = new Major("¼ÆËã»ú¿ÆÑ§Óë¼¼Êõ","S0001",-4);
+		Major m = new Major("è®¡ç®—æœºç§‘å­¦ä¸ŽæŠ€æœ¯","S0001",4);
 		System.out.println(m.toString());
+		System.out.println("==================================");
+		
+		Student s = new Student("å¼ ä¸‰","S001","ç”·",19);
+		System.out.println(s.toString());
 	}
 
 }
