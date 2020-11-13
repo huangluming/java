@@ -1,4 +1,4 @@
-package com.imooc.subject;
+package com.imooc.model;
 
 public class Major {
 	private String majorName;
