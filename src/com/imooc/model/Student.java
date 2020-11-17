@@ -5,12 +5,12 @@ public class Student {
 	private String StudentNo;
 	private String StudentNSex;
 	private int StudentAge;
+	private Major studentMajor;
 	
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
 	
 	public Student(String studentName, String studentNo, String studentNSex, int studentAge) {
 		super();
@@ -18,7 +18,31 @@ public class Student {
 		this.setStudentName(studentName);
 		this.setStudentNo(studentNo);
 		this.setStudentNSex(studentNSex);
+//		this.setStudentMajor(studentMajor);
 	}
+	
+	public Student(String studentName, String studentNo, String studentNSex, int studentAge,Major studentMajor) {
+		super();
+		this.setStudentAge(studentAge);
+		this.setStudentName(studentName);
+		this.setStudentNo(studentNo);
+		this.setStudentNSex(studentNSex);
+		this.setStudentMajor(studentMajor);
+	}
+
+	public Major getStudentMajor() {
+		if(this.studentMajor==null) {
+			 this.studentMajor = new Major();
+		} 
+		return studentMajor;
+	}
+
+
+	public void setStudentMajor(Major studentMajor) {
+
+		this.studentMajor = studentMajor;
+	}
+
 
 	public String getStudentName() {
 		return StudentName;
@@ -58,6 +82,14 @@ public class Student {
 				+ ", StudentAge=" + StudentAge + "]";
 	}
 	
+	public String intrduction() {
+		String str="学生信息如下:\n姓名:"+this.getStudentName()+"\n学号："+this.getStudentNo()
+				+"\n性别:"+this.getStudentNSex()+"\n年龄："+this.getStudentAge()
+				+"\n专业："+this.getStudentMajor().getMajorName()
+				+"\n专业编号："+this.getStudentMajor().getMajorCode()
+				+"\n学制:"+this.getStudentMajor().getMajorYear();
+		return str;
+	}
 	
 	
 	
